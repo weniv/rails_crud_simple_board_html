@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 쓰기</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <style>
+    .inline_form_row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .inline_form_row label {
+      min-width: 5rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    .submit-wrap { display: flex; justify-content: center; }
+    .submit-button { max-width: 5rem; }
+    .cancel-button { width: 5rem; margin-bottom: 1rem; margin-left: 1rem; }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>자유게시판 글 쓰기</h1>
+    <form>
+      <div class="inline_form_row">
+        <label for="author">작성자</label>
+        <input type="text" id="author" name="author">
+      </div>
+      <div class="inline_form_row">
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="inline_form_row">
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title">
+      </div>
+      <div class="inline_form_row">
+        <label for="title">내용</label>
+        <textarea rows="15"></textarea>
+      </div>
+      <div class="inline_form_row">
+        <label for="title">첨부파일</label>
+        <div>
+          <input type="file" id="file1" name="file1">
+          <input type="file" id="file2" name="file2">
+        </div>
+      </div>
+      <div class="submit-wrap">
+        <input type="submit" value="확인" class="submit-button">
+        <a href="index.html" role="button" class="cancel-button secondary">취소</a>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
